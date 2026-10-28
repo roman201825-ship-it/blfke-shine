@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BLACK SHINE | Лаборатория Премиум Детейлинга</title>
+    <style>
+        body {
+            background-color: #050507;
+            color: #ffffff;
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            min-height: 95vh;
+        }
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #1e1b4b;
+            max-w: 600px;
+            margin: 0 auto;
+            width: 100%;
+        }
+        .logo {
+            font-weight: 900;
+            letter-spacing: 2px;
+            background: linear-gradient(to right, #06b6d4, #a855f7);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-size: 22px;
+        }
+        .container {
+            max-width: 500px;
+            margin: 30px auto;
+            width: 100%;
+        }
+        .card {
+            background: linear-gradient(135deg, #0f0f16 0%, #09090d 100%);
+            padding: 25px;
+            border-radius: 20px;
+            border: 1px solid #1e1b4b;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7);
+            margin-bottom: 25px;
+            transition: transform 0.3s, border-color 0.3s, box-shadow 0.3s;
+        }
+        .card:hover {
+            transform: translateY(-2px);
+            border-color: #a855f7;
+            box-shadow: 0 10px 30px rgba(168, 85, 247, 0.2);
+        }
+        h1, h2 {
+            text-align: center;
+            margin-top: 0;
+            font-weight: 800;
+        }
+        h1 { font-size: 24px; margin-bottom: 5px; color: #ffffff; }
+        h2 { font-size: 18px; margin-bottom: 20px; color: #06b6d4; text-transform: uppercase; tracking-width: 1px; }
+        
+        .price-list {
+            margin-bottom: 10px;
+        }
+        .price-item {
+            display: flex;
+            justify-content: space-between;
+            padding: 12px 0;
+            border-bottom: 1px solid #161622;
+            font-size: 15px;
+        }
+        .price-name { color: #cbd5e1; }
+        .price-cost { font-weight: bold; color: #06b6d4; }
+
+        /* Уникальный блок фишек */
+        .features {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+            margin-bottom: 10px;
+        }
+        .feature-box {
+            background: #07070a;
+            padding: 12px;
+            border-radius: 12px;
+            border: 1px solid #111;
+            font-size: 13px;
+            text-align: center;
+            color: #94a3b8;
+        }
+        .feature-box strong {
+            color: #a855f7;
+            display: block;
+            margin-bottom: 3px;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+        label {
+            display: block;
+            font-size: 11px;
+            color: #94a3b8;
+            margin-bottom: 6px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        input {
+            width: 93%;
+            background-color: #050507;
+            border: 1px solid #1e1b4b;
+            border-radius: 10px;
+            padding: 12px;
+            color: #ffffff;
+            font-size: 16px;
+            transition: 0.2s;
+        }
+        input:focus {
+            outline: none;
+            border-color: #06b6d4;
+            box-shadow: 0 0 10px rgba(6, 182, 212, 0.3);
+        }
+        
+        /* Интерактивный чекбокс подарка */
+        .gift-checkbox {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            background: rgba(6, 182, 212, 0.05);
+            padding: 12px;
+            border-radius: 10px;
+            border: 1px dashed #06b6d4;
+            margin: 15px 0;
+            font-size: 14px;
+            cursor: pointer;
+        }
+        .gift-checkbox input {
+            width: auto;
+            cursor: pointer;
+        }
+
+        button {
+            width: 100%;
+            padding: 15px;
+            background: linear-gradient(90deg, #06b6d4 0%, #a855f7 100%);
+            color: #ffffff;
+            border: none;
+            border-radius: 10px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.3s;
+            box-shadow: 0 4px 15px rgba(6, 182, 212, 0.4);
+        }
+        button:hover {
+            opacity: 0.9;
+            box-shadow: 0 4px 20px rgba(168, 85, 247, 0.6);
+        }
+        footer {
+            text-align: center;
+            font-size: 12px;
+            color: #475569;
+            margin-top: auto;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">BLACK SHINE</div>
+        <div style="color: #06b6d4; font-weight: bold; font-size: 14px;">⚡ LAB</div>
+    </header>
+
+    <div class="container">
+        <!-- БЛОК 1: НАШИ ЦЕНЫ -->
+        <div class="card">
+            <h2>Прайс-лист лаборатории</h2>
+            <div class="price-list">
+                <div class="price-item">
+                    <span class="price-name">🧽 Деликатная химчистка салона</span>
+                    <span class="price-cost">от 7 000 ₽</span>
+                </div>
+                <div class="price-item">
+                    <span class="price-name">💎 Лазерная полировка кузова</span>
+                    <span class="price-cost">от 10 000 ₽</span>
+                </div>
+                <div class="price-item">
+                    <span class="price-name">🔮 Нанокерамика (Защита + Блеск)</span>
+                    <span class="price-cost">от 15 000 ₽</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- БЛОК 2: ПОЧЕМУ МЫ (Уникальный элемент) -->
+        <div class="card">
+            <h2>Наши стандарты</h2>
+            <div class="features">
+                <div class="feature-box"><strong>⏱️ 24 Часа</strong>Работаем оперативно</div>
+                <div class="feature-box"><strong>🧪 Нано-химия</strong>Без вреда для авто</div>
+                <div class="feature-box"><strong>📸 Видеоотчет</strong>Контроль процесса</div>
+                <div class="feature-box"><strong>🛡️ Гарантия</strong>1 год на покрытие</div>
+            </div>
+        </div>
+
+        <!-- БЛОК 3: ФОРМА ЗАПИСИ -->
+        <div class="card">
+            <h1>Вход в лабораторию</h1>
+            <p style="color: #94a3b8; font-size: 14px; text-align: center; margin-bottom: 15px;">Забронируйте визит прямо сейчас</p>
+            
+            <form onsubmit="sendForm(event)">
+                <div class="form-group">
+                    <label>Ваше имя</label>
+                    <input type="text" id="userName" required placeholder="Эрик">
+                </div>
+                <div class="form-group">
+                    <label>Телефон</label>
+                    <input type="tel" required placeholder="+7 (999) 000-00-00">
+                </div>
+
+                <!-- Интересный интерактивный элемент: подарок -->
+                <div class="gift-checkbox" onclick="toggleGift()">
+                    <input type="checkbox" id="giftOption" onchange="updateButtonText(event)">
+                    <span>🎁 Добавить чернение резины бесплатно</span>
+                </div>
+
+                <button type="submit" id="submitBtn">Записаться на осмотр</button>
+            </form>
+        </div>
+    </div>
+
+    <footer>
+        &copy; 2026 BLACK SHINE LAB. Сделано вручную.
+    </footer>
+
+    <script>
+        function toggleGift() {
+            const checkbox = document.getElementById('giftOption');
+            // Предотвращаем двойной клик, если нажали точно по чекбоксу
+            if (event.target !== checkbox) {
+                checkbox.checked = !checkbox.checked;
+                // Имитируем событие изменения вручную
+                const changeEvent = new Event('change');
+                checkbox.dispatchEvent(changeEvent);
+            }
+        }
+
+        function updateButtonText(event) {
+            const btn = document.getElementById('submitBtn');
+            if (event.target.checked) {
+                btn.innerText = "Записаться + Забрать подарок! 🔥";
+            } else {
+                btn.innerText = "Записаться на осмотр";
+            }
+        }
+
+        function sendForm(event) {
+            event.preventDefault();
+            const name = document.getElementById('userName').value;
+            const hasGift = document.getElementById('giftOption').checked;
+            
+            let message = 'Вы успешно записаны, ' + name + '!\n\n';
+            if (hasGift) {
+                message += '🎁 Подарочное чернение шин добавлено к вашему заказу!';
+            } else {
+                message += 'Мы свяжемся с вами в течение 15 минут.';
+            }
+            
+            alert(message);
+        }
+    </script>
+<div style="max-width: 400px; margin: 20px auto; padding: 20px; border: 1px solid #ccc; border-radius: 8px; font-family: sans-serif;">
+    <h3>Оформить заказ в Black Shine</h3>
+    <form id="orderForm">
+        <label style="display:block; margin-bottom:5px;">Ваше имя:</label>
+        <input type="text" id="name" required style="width:100%; padding:8px; margin-bottom:15px; box-sizing:border-box;">
+
+        <label style="display:block; margin-bottom:5px;">Номер телефона:</label>
+        <input type="tel" id="phone" required style="width:100%; padding:8px; margin-bottom:15px; box-sizing:border-box;">
+
+        <label style="display:block; margin-bottom:5px;">Что хотите заказать:</label>
+        <textarea id="product" required style="width:100%; padding:8px; margin-bottom:15px; box-sizing:border-box; height:8px0px;"></textarea>
+
+        <button type="submit" style="width:100%; padding:10px; background:#000; color:#fff; border:none; border-radius:4px; cursor:pointer;">Отправить заказ</button>
+    </form>
+    <p id="statusMessage" style="margin-top:15px; font-weight:bold; color:green; display:none;"></p>
+</div>
+
+<script>
+document.getElementById('orderForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+
+    // НАСТРОЙКА: Вставь свои данные сюда внутри кавычек
+    const TELEGRAM_TOKEN = 'СЮДА_ВСТАВЬ_ТОКЕН_ОТ_BOTFATHER';
+    const CHAT_ID = 'СЮДА_ВСТАВЬ_ТВОЙ_ID_ИЗ_ШАГА_1';
+
+    const name = document.getElementById('name').value;
+    const phone = document.getElementById('phone').value;
+    const product = document.getElementById('product').value;
+
+    // Формируем красивый текст сообщения для админа
+    const text = `🛍 Новый заказ в Black Shine!\n\n👤 Имя: ${name}\n📞 Телефон: ${phone}\n📦 Заказ: ${product}`;
+
+    // Отправляем запрос в Telegram API
+    const url = `https://telegram.org{TELEGRAM_TOKEN}/sendMessage`;
+    
+    fetch(url, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+            chat_id: CHAT_ID,
+            text: text
+        })
+    })
+    .then(response => {
+        if (response.ok) {
+            const status = document.getElementById('statusMessage');
+            status.textContent = 'Спасибо! Заказ успешно отправлен.';
+            status.style.display = 'block';
+            document.getElementById('orderForm').reset();
+        } else {
+            alert('Ошибка при отправке заказа. Проверьте токен или ID.');
+        }
+    })
+    .catch(error => {
+        console.error('Ошибка:', error);
+        alert('Произошла ошибка сети.');
+    });
+});
+</script>
+<div style="max-width: 400px; margin: 20px auto; padding: 20px; border: 1px solid #ccc; border-radius: 8px; font-family: sans-serif;">
+    <h3>Оформить заказ в Black Shine</h3>
+    <form id="orderForm">
+        <label style="display:block; margin-bottom:5px;">Ваше имя:</label>
+        <input type="text" id="name" required style="width:100%; padding:8px; margin-bottom:15px; box-sizing:border-box;">
+
+        <label style="display:block; margin-bottom:5px;">Номер телефона:</label>
+        <input type="tel" id="phone" required style="width:100%; padding:8px; margin-bottom:15px; box-sizing:border-box;">
+
+        <label style="display:block; margin-bottom:5px;">Что хотите заказать:</label>
+        <textarea id="product" required style="width:100%; padding:8px; margin-bottom:15px; box-sizing:border-box; height:8px0px;"></textarea>
+
+        <button type="submit" style="width:100%; padding:10px; background:#000; color:#fff; border:none; border-radius:4px; cursor:pointer;">Отправить заказ</button>
+    </form>
+    <p id="statusMessage" style="margin-top:15px; font-weight:bold; color:green; display:none;"></p>
+</div>
+
+<script>
+document.getElementById('orderForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+
+    // НАСТРОЙКА: Вставь свои данные сюда внутри кавычек
+    const TELEGRAM_TOKEN = 'СЮДА_ВСТАВЬ_ТОКЕН_ОТ_BOTFATHER';
+    const CHAT_ID = 'СЮДА_ВСТАВЬ_ТВОЙ_ID_ИЗ_ШАГА_1';
+
+    const name = document.getElementById('name').value;
+    const phone = document.getElementById('phone').value;
+    const product = document.getElementById('product').value;
+
+    // Формируем красивый текст сообщения для админа
+    const text = `🛍 Новый заказ в Black Shine!\n\n👤 Имя: ${name}\n📞 Телефон: ${phone}\n📦 Заказ: ${product}`;
+
+    // Отправляем запрос в Telegram API
+    const url = `https://telegram.org{TELEGRAM_TOKEN}/sendMessage`;
+    
+    fetch(url, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+            chat_id: CHAT_ID,
+            text: text
+        })
+    })
+    .then(response => {
+        if (response.ok) {
+            const status = document.getElementById('statusMessage');
+            status.textContent = 'Спасибо! Заказ успешно отправлен.';
+            status.style.display = 'block';
+            document.getElementById('orderForm').reset();
+        } else {
+            alert('Ошибка при отправке заказа. Проверьте токен или ID.');
+        }
+    })
+    .catch(error => {
+        console.error('Ошибка:', error);
+        alert('Произошла ошибка сети.');
+    });
+});
+</script>
+<div style="max-width: 400px; margin: 20px auto; padding: 20px; border: 1px solid #ccc; border-radius: 8px; font-family: sans-serif;">
+    <h3>Оформить заказ в Black Shine</h3>
+    <form id="orderForm">
+        <label style="display:block; margin-bottom:5px;">Ваше имя:</label>
+        <input type="text" id="name" required style="width:100%; padding:8px; margin-bottom:15px; box-sizing:border-box;">
+
+        <label style="display:block; margin-bottom:5px;">Номер телефона:</label>
+        <input type="tel" id="phone" required style="width:100%; padding:8px; margin-bottom:15px; box-sizing:border-box;">
+
+        <label style="display:block; margin-bottom:5px;">Что хотите заказать:</label>
+        <textarea id="product" required style="width:100%; padding:8px; margin-bottom:15px; box-sizing:border-box; height:8px0px;"></textarea>
+
+        <button type="submit" style="width:100%; padding:10px; background:#000; color:#fff; border:none; border-radius:4px; cursor:pointer;">Отправить заказ</button>
+    </form>
+    <p id="statusMessage" style="margin-top:15px; font-weight:bold; color:green; display:none;"></p>
+</div>
+
+<script>
+document.getElementById('orderForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+
+    // НАСТРОЙКА: Вставь свои данные сюда внутри кавычек
+    const TELEGRAM_TOKEN = 'СЮДА_ВСТАВЬ_ТОКЕН_ОТ_BOTFATHER';
+    const CHAT_ID = 'СЮДА_ВСТАВЬ_ТВОЙ_ID_ИЗ_ШАГА_1';
+
+    const name = document.getElementById('name').value;
+    const phone = document.getElementById('phone').value;
+    const product = document.getElementById('product').value;
+
+    // Формируем красивый текст сообщения для админа
+    const text = `🛍 Новый заказ в Black Shine!\n\n👤 Имя: ${name}\n📞 Телефон: ${phone}\n📦 Заказ: ${product}`;
+
+    // Отправляем запрос в Telegram API
+    const url = `https://telegram.org{TELEGRAM_TOKEN}/sendMessage`;
+    
+    fetch(url, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+            chat_id: CHAT_ID,
+            text: text
+        })
+    })
+    .then(response => {
+        if (response.ok) {
+            const status = document.getElementById('statusMessage');
+            status.textContent = 'Спасибо! Заказ успешно отправлен.';
+  <div style="max-width: 400px; margin: 20px auto; padding: 20px; border: 1px solid #ccc; border-radius: 8px; font-family: sans-serif;">
+    <h3>Оформить заказ в Black Shine</h3>
+    <form id="orderForm">
+        <label style="display:block; margin-bottom:5px;">Ваше имя:</label>
+        <input type="text" id="name" required style="width:100%; padding:8px; margin-bottom:15px; box-sizing:border-box;">
+
+        <label style="display:block; margin-bottom:5px;">Номер телефона:</label>
+        <input type="tel" id="phone" required style="width:100%; padding:8px; margin-bottom:15px; box-sizing:border-box;">
+
+        <label style="display:block; margin-bottom:5px;">Что хотите заказать:</label>
+        <textarea id="product" required style="width:100%; padding:8px; margin-bottom:15px; box-sizing:border-box; height:8px0px;"></textarea>
+
+        <button type="submit" style="width:100%; padding:10px; background:#000; color:#fff; border:none; border-radius:4px; cursor:pointer;">Отправить заказ</button>
+    </form>
+    <p id="statusMessage" style="margin-top:15px; font-weight:bold; color:green; display:none;"></p>
+</div>
+
+<script>
+document.getElementById('orderForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+
+    // НАСТРОЙКА: Вставь свои данные сюда внутри кавычек
+    const TELEGRAM_TOKEN = '9195486263: AAGZVaN2w-9we80er0kMfRH
+rn1oBhPw_f1o';
+    const CHAT_ID = '5112157778';
+
+    const name = document.getElementById('name').value;
+    const phone = document.getElementById('phone').value;
+    const product = document.getElementById('product').value;
+
+    // Формируем красивый текст сообщения для админа
+    const text = `🛍 Новый заказ в Black Shine!\n\n👤 Имя: ${name}\n📞 Телефон: ${phone}\n📦 Заказ: ${product}`;
+
+    // Отправляем запрос в Telegram API
+    const url = `https://telegram.org{TELEGRAM_TOKEN}/sendMessage`;
+    
+    fetch(url, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+            chat_id: CHAT_ID,
+            text: text
+        })
+    })
+    .then(response => {
+        if (response.ok) {
+            const status = document.getElementById('statusMessage');
+            status.textContent = 'Спасибо! Заказ успешно отправлен.';
+            status.style.display = 'block';
+            document.getElementById('orderForm').reset();
+        } else {
+            alert('Ошибка при отправке заказа. Проверьте токен или ID.');
+        }
+    })
+    .catch(error => {
+        console.error('Ошибка:', error);
+        alert('Произошла ошибка сети.');
+    });
+});
+
+</body>
+</html>
